@@ -53,7 +53,7 @@ async function run(){
 
         app.delete('/orders/:id',async(req,res)=>{
             const query = {_id: new ObjectId(req.params.id)}
-            const result = await OrderCollection.deleteOne(query)
+            const result = await OrderCollection.deleteOne(query);
             res.json(result);
         })
         app.post('/orders', async(req,res)=>{
